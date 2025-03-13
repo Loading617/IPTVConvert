@@ -1,2 +1,2 @@
 # IPTVConvert
-IPTV List Converter Windows App
+Convert a M3U or M3U8 to List or File  
