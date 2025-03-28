@@ -2,7 +2,7 @@ import customtkinter
 from CTkMenuBar import *
 
 root = customtkinter.CTk()
-root.geometry("600x200")
+root.geometry("920x570")
 root.title("IPTVConvert")
 
 menu = CTkTitleMenu(root)
