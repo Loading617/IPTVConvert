@@ -5,7 +5,7 @@ root = customtkinter.CTk()
 root.geometry("600x200")
 root.title("IPTVConvert")
 
-menu = CTkMenuBar(root)
+menu = CTkTitleMenu(root)
 button_1 = menu.add_cascade("File")
 button_2 = menu.add_cascade("Edit")
 button_3 = menu.add_cascade("Tools")
@@ -50,12 +50,12 @@ dropdown3.add_option(option="Customize Output")
 
 dropdown3.add_separator()
 
-sub_menu = dropdown.add_submenu("Sort Channels")
+sub_menu = dropdown3.add_submenu("Sort Channels")
 sub_menu.add_option(option="By Name")
 sub_menu.add_option(option="By Category")
 sub_menu.add_option(option="By URL")
 
-sub_menu = dropdown.add_submenu("Convert Encoding")
+sub_menu = dropdown3.add_submenu("Convert Encoding")
 sub_menu.add_option(option="UTF-8")
 sub_menu.add_option(option="ANSI")
 sub_menu.add_option(option="ISO-8859-1")
@@ -64,6 +64,8 @@ dropdown4 = CustomDropdownMenu(widget=button_4)
 dropdown4.add_option(option="Show Grid/List View")
 dropdown4.add_option(option="Show Channel Logos")
 dropdown4.add_option(option="Toggle Dark Mode")
+
+dropdown4.add_separator()
 
 dropdown5 = CustomDropdownMenu(widget=button_5)
 dropdown5.add_option(option="User Guide")
