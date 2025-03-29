@@ -1,11 +1,13 @@
 import customtkinter as ctk
+import tkinter.ttk as ttk
 
 class IPTVConvert(ctk.CTk):
     def __init__(self):
         super().__init__()
         self.title("IPTVConvert")
         self.geometry("920x570")
-        self.menu = ctk.CTkTitleMenu(root)
+
+        self.menu = ctk.CTkTitleMenu(self)
 
         self.file_menu = self.menu.add_cascade("File")
         self.edit_menu = self.menu.add_cascade("Edit")
@@ -19,6 +21,8 @@ class IPTVConvert(ctk.CTk):
         self.create_view_menu()
         self.create_help_menu()
 
+        self.create_treeview()
+
     def create_file_menu(self):
         dropdown = CustomDropdownMenu(widget=self.file_menu)
         dropdown.add_option(option="Open Playlist...", command=lambda: print("Open"))
@@ -26,7 +30,7 @@ class IPTVConvert(ctk.CTk):
         dropdown.add_option(option="Save As...", command=lambda: print("Save As"))
         dropdown.add_option(option="Import from URL...", command=lambda: print("Import"))
         dropdown.add_option(option="Export to Format...", command=lambda: print("Export"))
-        dropdown.add_option(option="Exit", command=lambda: print("Exit"))
+        dropdown.add_option(option="Exit", command=self.quit)
 
         dropdown.add_separator()
 
@@ -85,7 +89,8 @@ class IPTVConvert(ctk.CTk):
         dropdown.add_option(option="Check for Update")
         dropdown.add_option(option="About IPTVConvert")
 
-frame = ctk.CTkFrame(self)
+    def create_treeview(self):
+        frame = ctk.CTkFrame(self)
         frame.pack(fill="both", expand=True, padx=10, pady=10)
 
         columns = ("#", "Channel Name", "URL", "Category", "Language", "Resolution", "Bitrate", "EPG ID")
