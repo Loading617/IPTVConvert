@@ -124,5 +124,4 @@ class IPTVConvert(ctk.CTk):
         self.tree.insert("", "end", values=(1, "ESPN", "http://stream.espn.com/live.m3u8", "Sports", "English", "1080p", "4000kbps", "ESPN_US"))
 
 if __name__ == "__main__":
-    app = IPTVConvert()
     app.mainloop()
