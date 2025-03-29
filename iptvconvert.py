@@ -20,7 +20,6 @@ class IPTVConvert(ctk.CTk):
         self.create_help_menu()
 
     def create_file_menu(self):
-        """Create the File menu dropdown options."""
         dropdown = CustomDropdownMenu(widget=self.file_menu)
         dropdown.add_option(option="Open Playlist...", command=lambda: print("Open"))
         dropdown.add_option(option="Save Playlist...", command=lambda: print("Save"))
@@ -38,7 +37,6 @@ class IPTVConvert(ctk.CTk):
         sub_menu.add_option(option=".TXT")
 
     def create_edit_menu(self):
-        """Create the Edit menu dropdown options."""
         dropdown = CustomDropdownMenu(widget=self.edit_menu)
         dropdown.add_option(option="Undo")
         dropdown.add_option(option="Redo")
@@ -51,7 +49,6 @@ class IPTVConvert(ctk.CTk):
         dropdown.add_separator()
 
     def create_tools_menu(self):
-        """Create the Tools menu dropdown options."""
         dropdown = CustomDropdownMenu(widget=self.tools_menu)
         dropdown.add_option(option="Validate Playlist")
         dropdown.add_option(option="Remove Validates")
@@ -74,7 +71,6 @@ class IPTVConvert(ctk.CTk):
         sub_menu.add_option(option="ISO-8859-1")
 
     def create_view_menu(self):
-        """Create the View menu dropdown options."""
         dropdown = CustomDropdownMenu(widget=self.view_menu)
         dropdown.add_option(option="Show Grid/List View")
         dropdown.add_option(option="Show Channel Logos")
@@ -83,7 +79,6 @@ class IPTVConvert(ctk.CTk):
         dropdown.add_separator()
 
     def create_help_menu(self):
-        """Create the Help menu dropdown options."""
         dropdown = CustomDropdownMenu(widget=self.help_menu)
         dropdown.add_option(option="User Guide")
         dropdown.add_option(option="Shortcuts Reference")
